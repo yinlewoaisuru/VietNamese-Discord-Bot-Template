@@ -297,4 +297,6 @@ async def setup(bot):
 
 **Join Discord:** https://discord.gg/A6sa9hARWA
 
+*Nếu project này hữu ích, hãy ⭐ Star để ủng hộ nhé!*
+
 </div>
