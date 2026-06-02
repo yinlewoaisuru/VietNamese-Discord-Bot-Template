@@ -1,6 +1,6 @@
 <div align="center">
 
-# VietNam Discord Bot
+# VietNamese Discord Bot
 
 **Discord Bot Template by Yinlewoaisuru**
 
@@ -36,7 +36,7 @@
 
 ## Tổng quan
 
-**VietNam Discord Bot** là template bot Discord viết bằng `discord.py`, được tổ chức theo cấu trúc module để dễ thêm lệnh, sự kiện và tính năng bảo mật.
+**VietNamese Discord Bot** là template bot Discord viết bằng `discord.py`, được tổ chức theo cấu trúc module để dễ thêm lệnh, sự kiện và tính năng bảo mật.
 
 - *Đây là source code bot Discord được viết chủ yếu bởi **Yinlewoaisuru***<br>
 - *Source hỗ trợ lệnh Prefix, Slash Commands, Events và tự động load cogs trong thư mục `Services`*<br>
