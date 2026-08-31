@@ -1,222 +1,347 @@
 <div align="center">
 
-# VietNamese Discord Bot
+# ˚₊‧ **VietNamese Discord Bot** ‧₊˚
 
-**Discord Bot Template by Yinlewoaisuru**
+### A modular Discord Bot template built with Python & discord.py
 
-<p>
-  <a href="https://discord.gg/fccfwHzms8">
-    <img alt="Discord Server" src="https://img.shields.io/badge/Discord-Tham_gia_may_chu-5865F2?style=for-the-badge&logo=discord&logoColor=white">
-  </a>
-  <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white">
-  <img alt="discord.py" src="https://img.shields.io/badge/discord.py-2.x-5865F2?style=for-the-badge">
-  <img alt="Commands" src="https://img.shields.io/badge/Commands-Prefix_+_Slash-2EA44F?style=for-the-badge">
-  <img alt="Cogs" src="https://img.shields.io/badge/Cogs-Auto_Load-FFB000?style=for-the-badge">
-</p>
+<br>
 
-<p>
-  <b>Gọn gàng</b> · <b>Dễ mở rộng</b> · <b>Tự động load cogs</b> · <b>Hỗ trợ Prefix và Slash</b>
-</p>
+<a href="https://github.com/nguyenphanno/VietNamese-Discord-Bot-Template">
+  <img src="https://img.shields.io/github/stars/nguyenphanno/VietNamese-Discord-Bot-Template?style=for-the-badge&label=STARS&labelColor=ffffff&color=8b5cf6&logo=github&logoColor=18181b" alt="Stars">
+</a>
+<a href="https://github.com/nguyenphanno/VietNamese-Discord-Bot-Template/network/members">
+  <img src="https://img.shields.io/github/forks/nguyenphanno/VietNamese-Discord-Bot-Template?style=for-the-badge&label=FORKS&labelColor=ffffff&color=a78bfa&logo=github&logoColor=18181b" alt="Forks">
+</a>
+<a href="https://github.com/nguyenphanno/VietNamese-Discord-Bot-Template/issues">
+  <img src="https://img.shields.io/github/issues/nguyenphanno/VietNamese-Discord-Bot-Template?style=for-the-badge&label=ISSUES&labelColor=ffffff&color=c4b5fd&logo=github&logoColor=18181b" alt="Issues">
+</a>
 
-<p>
-  <a href="#cài-đặt-nhanh">Cài đặt</a>
-  ·
-  <a href="#cấu-trúc-thư-mục">Cấu trúc</a>
-  ·
-  <a href="#danh-sách-lệnh">Lệnh có sẵn</a>
-  ·
-  <a href="#tạo-cog-mới">Tạo cog</a>
-  ·
-  <a href="https://discord.gg/fccfwHzms8">Discord</a>
-</p>
+<br>
+
+<img src="https://img.shields.io/badge/Python-3.10%2B-ffffff?style=for-the-badge&logo=python&logoColor=3776AB&labelColor=ffffff" alt="Python">
+<img src="https://img.shields.io/badge/discord.py-2.x-ffffff?style=for-the-badge&logo=discord&logoColor=5865F2&labelColor=ffffff" alt="discord.py">
+
+<br><br>
+
+<a href="https://discord.gg/fccfwHzms8">
+  <img src="https://img.shields.io/badge/Join%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
+</a>
+<a href="https://github.com/nguyenphanno/VietNamese-Discord-Bot-Template/issues">
+  <img src="https://img.shields.io/badge/Report%20an%20Issue-18181B?style=for-the-badge&logo=github&logoColor=white" alt="Issues">
+</a>
+
+<br><br>
+
+> **Gọn gàng · Modular · Dễ mở rộng · Tự động load Cogs**
 
 </div>
 
 ---
 
-## Tổng quan
+## 01 · Overview
 
-**VietNamese Discord Bot** là template bot Discord viết bằng `discord.py`, được tổ chức theo cấu trúc module để dễ thêm lệnh, sự kiện và tính năng bảo mật.
+**VietNamese Discord Bot** là một template Discord Bot được xây dựng bằng **Python + discord.py**, được thiết kế để trở thành nền tảng khởi đầu cho những project Discord Bot mới.
 
-- *Đây là source code bot Discord được viết chủ yếu bởi **Yinlewoaisuru***<br>
-- *Source hỗ trợ lệnh Prefix, Slash Commands, Events và tự động load cogs trong thư mục `Services`*<br>
-- *Lưu ý rằng chúng tôi sẽ không **chịu trách nhiệm** về những việc bạn làm khi mang source code đi quấy rối/gây hại cho<br>những cá nhân, tổ chức khác*<br>
-- *Tham gia máy chủ Discord :* **https://discord.gg/fccfwHzms8**<br>
-- *Bạn hoàn toàn có thể tạo pull requests nếu bot gặp lỗi hoặc contact discord của mình @iw.uyenn._*<br>
+Thay vì đặt toàn bộ logic trong một file duy nhất, project sử dụng kiến trúc **Services / Commands / Events**, giúp source dễ đọc, dễ bảo trì và dễ mở rộng.
 
-> [!NOTE]
-> Dự án này ưu tiên cấu trúc sạch: `main.py` chỉ chạy bot và tự load cogs, còn tính năng được đặt trong `Services`.
+### Project Information
 
-> [!IMPORTANT]
-> Không chia sẻ `TOKEN` bot công khai. Nếu token bị lộ, hãy reset token ngay trong Discord Developer Portal.
+| Component              | Details                           |
+| :--------------------- | :-------------------------------- |
+| **Language**           | Python 3.10+                      |
+| **Framework**          | discord.py 2.x                    |
+| **Command System**     | Prefix + Slash Commands           |
+| **Architecture**       | Modular / Cog-based               |
+| **Auto Loader**        | Automatic `.py` Cog loading       |
+| **Configuration**      | `Setting/Config.json`             |
+| **Entry Point**        | `main.py`                         |
+| **Security**           | Ghost Ping Detection + Lockdown   |
+| **Command Categories** | Utilities / Moderation / Security |
+| **Extensibility**      | Commands / Events / Services      |
 
-## Mục lục
+### What is this project?
 
-- [Thông tin dự án](#thông-tin-dự-án)
-- [Cài đặt nhanh](#cài-đặt-nhanh)
-- [Cấu hình](#cấu-hình)
-- [Cấu trúc thư mục](#cấu-trúc-thư-mục)
-- [Tính năng](#tính-năng)
-- [Danh sách lệnh](#danh-sách-lệnh)
-- [Tạo cog mới](#tạo-cog-mới)
-- [Quyền cần cấp](#quyền-cần-cấp)
-- [Troubleshooting](#troubleshooting)
-- [Tham khảo](#tham-khảo)
+Project được xây dựng để bạn có thể nhanh chóng bắt đầu phát triển Discord Bot mà không phải thiết lập lại toàn bộ architecture từ đầu.
 
-## Thông tin dự án
+* Source code được phát triển chủ yếu bởi **nguyenphanno**
+* Hỗ trợ **Prefix Commands**
+* Hỗ trợ **Slash Commands**
+* Hỗ trợ **Events**
+* Tự động load Cogs trong `Services`
+* Commands được chia theo từng category
+* Configuration được tách khỏi source code
+* Có sẵn moderation và security utilities
+* Có thể mở rộng thêm database, logging và các service khác
 
-| Mục | Nội dung |
-| --- | --- |
-| Ngôn ngữ | Python |
-| Thư viện chính | `discord.py` |
-| Kiểu lệnh | Prefix Commands và Slash Commands |
-| Cấu hình | `Setting/Config.json` |
-| Module chính | `Services` |
-| Entry point | `main.py` |
-| Auto-load | Có, tự quét file `.py` trong `Services` |
+> Project được cung cấp cho mục đích học tập, phát triển và xây dựng Discord Bot. Người sử dụng tự chịu trách nhiệm với cách triển khai và sử dụng source code.
 
-## Cài đặt nhanh
+---
 
-### 1. Cài thư viện
+## 02 · Repository Statistics
+
+<div align="center">
+
+<a href="https://github.com/nguyenphanno/VietNamese-Discord-Bot-Template">
+<img src="https://github-readme-stats.vercel.app/api?username=nguyenphanno&repo=VietNamese-Discord-Bot-Template&show_icons=true&hide_border=true&bg_color=ffffff&title_color=8b5cf6&icon_color=8b5cf6&text_color=52525b&include_all_commits=true&count_private=true" height="170">
+</a>
+
+<a href="https://github.com/nguyenphanno/VietNamese-Discord-Bot-Template">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nguyenphanno&layout=compact&hide_border=true&bg_color=ffffff&title_color=8b5cf6&text_color=52525b&langs_count=8" height="170">
+</a>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nguyenphanno&theme=default" width="92%">
+
+</div>
+
+---
+
+## 03 · Quick Start
+
+### Clone
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/nguyenphanno/VietNamese-Discord-Bot-Template.git
+cd VietNamese-Discord-Bot-Template
 ```
 
-### 2. Điền config
+### Virtual Environment
 
-```txt
-Setting/Config.json
-```
-
-### 3. Chạy bot
-
-```bash
-python main.py
-```
-
-> [!TIP]
-> Nếu bạn đang dùng Windows PowerShell và muốn dùng môi trường ảo, có thể chạy:
+**Windows PowerShell**
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python main.py
 ```
 
-## Cấu hình
+**Linux / macOS**
 
-Mở file `Setting/Config.json` và điền thông tin bot:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### Install
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configure
+
+Mở:
+
+```text
+Setting/Config.json
+```
 
 ```json
 {
-    "TOKEN": "TOKEN BOT CỦA BẠN Ở ĐÂY",
+    "TOKEN": "YOUR_BOT_TOKEN",
     "PREFIX": "!",
-    "OWNER_ID": 0,
-    "CLIENT_ID": 0
+    "OWNER_ID": 123456789012345678,
+    "CLIENT_ID": 123456789012345678
 }
 ```
 
-| Trường | Ý nghĩa | Ví dụ |
-| --- | --- | --- |
-| `TOKEN` | Token bot Discord | `"abc.xzy..."` |
-| `PREFIX` | Prefix cho lệnh prefix | `"!"` |
-| `OWNER_ID` | ID chủ bot | `123456789012345678` |
-| `CLIENT_ID` | Application ID hoặc Client ID | `123456789012345678` |
+### Run
 
-> [!WARNING]
-> `TOKEN` phải để trong `Setting/Config.json` hoặc hệ thống cấu hình riêng của bạn. Không đăng token lên GitHub, Discord hoặc gửi cho người khác.
-
-## Cấu trúc thư mục
-
-```txt
-VietNamese-Discord-Bot-Template/
-├─ main.py
-├─ requirements.txt
-├─ README.md
-├─ .gitignore
-├─ Setting/
-│  ├─ Config.json
-│  └─ Env/
-│     └─ .env
-└─ Services/
-   ├─ Events/
-   │  ├─ ready.py
-   │  └─ command_errors.py
-   └─ Commands/
-      ├─ Prefix/
-      │  ├─ Utilities/
-      │  ├─ Moderation/
-      │  └─ Security/
-      └─ Slash/
-         ├─ Utilities/
-         ├─ Moderation/
-         └─ Security/
+```bash
+python main.py
 ```
 
-> [!NOTE]
-> Bạn chỉ cần thêm file `.py` mới vào đúng thư mục trong `Services`. Bot sẽ tự quét và load cog khi khởi động.
+> [!IMPORTANT]
+> Không commit `TOKEN` lên GitHub. Nếu token đã bị lộ, hãy reset token ngay trong Discord Developer Portal.
 
-## Tính năng
+---
 
-| Nhóm | Mô tả |
-| --- | --- |
-| `Prefix` | Lệnh dạng `!ping`, `!help`, `!clear` |
-| `Slash` | Lệnh dạng `/ping`, `/userinfo`, `/ban`, `/kick`, `/lock` |
-| `Events` | Chứa listener như `on_ready`, error handler |
-| `Security` | Có sẵn ghost ping detection và lockdown |
-| `Auto Load` | Thêm file `.py` vào `Services` là bot tự load cog |
-| `Clean Structure` | Tách rõ config, events, prefix commands và slash commands |
+## 04 · Features
 
-## Danh sách lệnh
+### Command System
+
+| Feature           | Description                         |
+| :---------------- | :---------------------------------- |
+| Prefix Commands   | Commands sử dụng prefix             |
+| Slash Commands    | Native Discord application commands |
+| Command Sync      | Đồng bộ Slash Commands              |
+| Permission Checks | Kiểm tra quyền trước khi thực thi   |
+
+### Moderation
+
+| Command     | Description                | Required Permission |
+| :---------- | :------------------------- | :------------------ |
+| `!clear`    | Xóa messages               | Manage Messages     |
+| `/clear`    | Xóa messages               | Manage Messages     |
+| `/kick`     | Kick member                | Kick Members        |
+| `/ban`      | Ban member                 | Ban Members         |
+| `/lock`     | Khóa channel               | Manage Channels     |
+| `/unlock`   | Mở khóa channel            | Manage Channels     |
+| `/lockdown` | Khóa toàn bộ text channels | Administrator       |
+
+### Security
+
+| Feature              | Description                 |
+| :------------------- | :-------------------------- |
+| Ghost Ping Detection | Phát hiện ghost ping        |
+| Lockdown System      | Khóa toàn bộ text channels  |
+| Permission Awareness | Kiểm tra permissions        |
+| Owner Commands       | Commands dành cho Bot Owner |
+| Error Handling       | Xử lý command errors        |
+
+### Developer Experience
+
+* Modular Cogs
+* Automatic Cog Loading
+* Category-based Commands
+* Event separation
+* Centralized configuration
+* Easy-to-maintain structure
+* Easy to add new Services
+
+---
+
+## 05 · Project Architecture
+
+```text
+VietNamese-Discord-Bot-Template/
+│
+├── main.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+│
+├── Setting/
+│   ├── Config.json
+│   └── Env/
+│       └── .env
+│
+└── Services/
+    │
+    ├── Events/
+    │   ├── ready.py
+    │   └── command_errors.py
+    │
+    └── Commands/
+        │
+        ├── Prefix/
+        │   ├── Utilities/
+        │   ├── Moderation/
+        │   └── Security/
+        │
+        └── Slash/
+            ├── Utilities/
+            ├── Moderation/
+            └── Security/
+```
+
+### Runtime Flow
+
+```text
+                         main.py
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │   Bot Setup   │
+                    └───────┬───────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │  Auto Loader  │
+                    └───────┬───────┘
+                            │
+              ┌─────────────┼─────────────┐
+              │             │             │
+              ▼             ▼             ▼
+           Events        Prefix          Slash
+              │             │             │
+              │             └──────┬──────┘
+              │                    │
+              └────────────────────┤
+                                   ▼
+                         ┌──────────────────┐
+                         │ Command Services │
+                         └────────┬─────────┘
+                                  │
+                    ┌─────────────┼─────────────┐
+                    ▼             ▼             ▼
+                Utilities     Moderation     Security
+```
+
+**Auto Loader** sẽ quét các module `.py` trong `Services` và load chúng khi bot khởi động.
+
+---
+
+## 06 · Commands
 
 ### Prefix Commands
 
-| Lệnh | Công dụng | Quyền |
-| --- | --- | --- |
-| `!ping` | Kiểm tra độ trễ bot | Tất cả |
-| `!help` | Xem danh sách lệnh prefix | Tất cả |
-| `!clear <số lượng>` | Xóa tin nhắn trong kênh | `Manage Messages` |
-| `!syncslash` | Đồng bộ slash command | Owner bot |
+| Command           | Description            | Permission      |
+| :---------------- | :--------------------- | :-------------- |
+| `!ping`           | Kiểm tra latency       | Everyone        |
+| `!help`           | Xem Prefix Commands    | Everyone        |
+| `!clear <amount>` | Xóa messages           | Manage Messages |
+| `!syncslash`      | Đồng bộ Slash Commands | Bot Owner       |
 
 ### Slash Commands
 
-| Lệnh | Công dụng | Quyền |
-| --- | --- | --- |
-| `/ping` | Kiểm tra độ trễ bot | Tất cả |
-| `/userinfo` | Xem thông tin người dùng | Tất cả |
-| `/clear` | Xóa tin nhắn | `Manage Messages` |
-| `/ban` | Ban thành viên | `Ban Members` |
-| `/kick` | Kick thành viên | `Kick Members` |
-| `/lock` | Khóa kênh chat | `Manage Channels` |
-| `/unlock` | Mở khóa kênh chat | `Manage Channels` |
-| `/lockdown` | Khóa toàn bộ text channel | `Administrator` |
+| Command     | Description                | Permission      |
+| :---------- | :------------------------- | :-------------- |
+| `/ping`     | Kiểm tra latency           | Everyone        |
+| `/userinfo` | Xem thông tin member       | Everyone        |
+| `/clear`    | Xóa messages               | Manage Messages |
+| `/ban`      | Ban member                 | Ban Members     |
+| `/kick`     | Kick member                | Kick Members    |
+| `/lock`     | Khóa channel               | Manage Channels |
+| `/unlock`   | Mở khóa channel            | Manage Channels |
+| `/lockdown` | Khóa toàn bộ text channels | Administrator   |
 
-> [!TIP]
-> Sau khi thêm hoặc sửa slash command, hãy dùng `!syncslash` để đồng bộ lại lệnh.
+---
 
-## Tạo cog mới
+## 07 · Configuration
 
-Đặt file `.py` vào một trong các thư mục sau:
+Configuration nằm tại:
 
-```txt
-Services/Commands/Prefix/Utilities/
-Services/Commands/Prefix/Moderation/
-Services/Commands/Prefix/Security/
-Services/Commands/Slash/Utilities/
-Services/Commands/Slash/Moderation/
-Services/Commands/Slash/Security/
-Services/Events/
+```text
+Setting/Config.json
 ```
 
-Mẫu cog prefix:
+### Available Keys
+
+| Key         | Type    | Description              |
+| :---------- | :------ | :----------------------- |
+| `TOKEN`     | String  | Discord Bot Token        |
+| `PREFIX`    | String  | Prefix của bot           |
+| `OWNER_ID`  | Integer | Discord ID của Bot Owner |
+| `CLIENT_ID` | Integer | Discord Application ID   |
+
+Example:
+
+```json
+{
+    "TOKEN": "YOUR_BOT_TOKEN",
+    "PREFIX": "!",
+    "OWNER_ID": 123456789012345678,
+    "CLIENT_ID": 123456789012345678
+}
+```
+
+---
+
+## 08 · Creating a Cog
+
+### Prefix Cog
 
 ```py
 from discord.ext import commands
 
 
 class Example(commands.Cog):
+
     def __init__(self, bot):
         self.bot = bot
 
@@ -229,7 +354,13 @@ async def setup(bot):
     await bot.add_cog(Example(bot))
 ```
 
-Mẫu cog slash:
+Place it in:
+
+```text
+Services/Commands/Prefix/Utilities/
+```
+
+### Slash Cog
 
 ```py
 import discord
@@ -238,65 +369,240 @@ from discord.ext import commands
 
 
 class ExampleSlash(commands.Cog):
+
     def __init__(self, bot):
         self.bot = bot
 
-    @app_commands.command(name="example", description="Example slash command")
+    @app_commands.command(
+        name="example",
+        description="Example slash command"
+    )
     async def example(self, interaction: discord.Interaction):
-        await interaction.response.send_message("Example slash command")
+        await interaction.response.send_message(
+            "Example slash command"
+        )
 
 
 async def setup(bot):
     await bot.add_cog(ExampleSlash(bot))
 ```
 
-> [!IMPORTANT]
-> Mỗi cog phải có `async def setup(bot): ...`. Nếu thiếu hàm này, `bot.load_extension()` sẽ không load được file đó.
+Place it in:
 
-## Quyền cần cấp
+```text
+Services/Commands/Slash/Utilities/
+```
 
-| Quyền | Dùng cho |
-| --- | --- |
-| `Send Messages` | Gửi phản hồi trong kênh |
-| `Read Message History` | Đọc lịch sử tin nhắn |
-| `Manage Messages` | Lệnh clear |
-| `Kick Members` | Lệnh kick |
-| `Ban Members` | Lệnh ban |
-| `Manage Channels` | Lệnh lock, unlock, lockdown |
-| `Administrator` | Một số thao tác moderation nâng cao |
+> [!NOTE]
+> Mỗi Cog bắt buộc phải có `async def setup(bot)` để Auto Loader có thể load module.
 
-> [!WARNING]
-> Nếu dùng lệnh prefix, hãy bật `Message Content Intent` trong Discord Developer Portal. Nếu không bật, bot có thể online nhưng không đọc được nội dung tin nhắn như `!ping`.
+---
 
-## Troubleshooting
+## 09 · Permissions & Intents
 
-| Lỗi | Cách xử lý |
-| --- | --- |
-| Bot không online | Kiểm tra `TOKEN` trong `Setting/Config.json` |
-| Prefix command không chạy | Bật `Message Content Intent` |
-| Slash command chưa hiện | Chạy `!syncslash`, chờ Discord cập nhật |
-| Cog không load | Kiểm tra file có `async def setup(bot)` |
-| Lệnh moderation lỗi quyền | Đưa role bot lên cao hơn và cấp quyền cần thiết |
+### Permissions
 
-> [!CAUTION]
-> Các lệnh như `ban`, `kick`, `clear`, `lockdown` có thể ảnh hưởng trực tiếp tới server. Hãy kiểm tra quyền và role hierarchy trước khi dùng.
+| Permission             | Used For            |
+| :--------------------- | :------------------ |
+| `Send Messages`        | Gửi response        |
+| `Read Message History` | Đọc message history |
+| `Manage Messages`      | Clear messages      |
+| `Kick Members`         | Kick members        |
+| `Ban Members`          | Ban members         |
+| `Manage Channels`      | Lock / Unlock       |
+| `Administrator`        | Lockdown            |
 
-## Tham khảo
+### Gateway Intent
 
-- [GitHub Docs - Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-- [Shields.io - Static Badge](https://shields.io/badges)
-- [discord.py - Cogs](https://discordpy.readthedocs.io/en/v2.5.2/ext/commands/cogs.html)
-- [discord.py - Bot commands framework](https://discordpy.readthedocs.io/en/v2.3.2/ext/commands/index.html)
-- [Discord Developer Docs - Gateway Intents](https://docs.discord.com/developers/topics/gateway)
+Nếu sử dụng Prefix Commands, cần bật:
+
+```text
+Message Content Intent
+```
+
+trong **Discord Developer Portal**.
+
+Nếu Intent chưa được bật, bot có thể online nhưng Prefix Commands sẽ không hoạt động đúng.
+
+---
+
+## 10 · Development Guide
+
+### Add Utility
+
+```text
+Services/
+└── Commands/
+    └── Prefix/
+        └── Utilities/
+            └── my_command.py
+```
+
+### Add Moderation
+
+```text
+Services/
+└── Commands/
+    └── Slash/
+        └── Moderation/
+            └── my_moderation.py
+```
+
+### Add Security
+
+```text
+Services/
+└── Commands/
+    └── Slash/
+        └── Security/
+            └── my_security.py
+```
+
+### Add Event
+
+```text
+Services/
+└── Events/
+    └── my_event.py
+```
+
+Nên giữ mỗi module tập trung vào một nhiệm vụ cụ thể. Điều này giúp project dễ debug, maintain và mở rộng.
+
+---
+
+## 11 · Troubleshooting
+
+| Problem                      | Solution                                 |
+| :--------------------------- | :--------------------------------------- |
+| Bot không online             | Kiểm tra `TOKEN`                         |
+| Prefix không hoạt động       | Bật `Message Content Intent`             |
+| Slash command chưa xuất hiện | Chạy `!syncslash`                        |
+| Cog không load               | Kiểm tra `async def setup(bot)`          |
+| Permission error             | Kiểm tra Bot Permissions                 |
+| Moderation không hoạt động   | Kiểm tra Role Hierarchy                  |
+| Bot phản hồi chậm            | Kiểm tra network / hosting / Discord API |
+| Slash command cũ             | Sync lại commands                        |
+
+---
+
+## 12 · Roadmap
+
+### Completed
+
+* [x] Prefix Commands
+* [x] Slash Commands
+* [x] Automatic Cog Loading
+* [x] Events System
+* [x] Moderation Commands
+* [x] Security Utilities
+* [x] Lockdown System
+* [x] Error Handling
+
+### Planned
+
+* [ ] Advanced Logging
+* [ ] Database Integration
+* [ ] More Security Modules
+* [ ] More Utility Commands
+* [ ] Improved Configuration System
+* [ ] Advanced Moderation
+* [ ] Better Permission Management
+* [ ] Expanded Event System
+
+> Roadmap có thể thay đổi trong quá trình phát triển project.
+
+---
+
+## 13 · Contributing
+
+Contributions, suggestions và bug reports đều được chào đón.
+
+```text
+1. Fork repository
+2. Create a branch
+3. Make your changes
+4. Test your changes
+5. Commit your work
+6. Push your branch
+7. Open a Pull Request
+```
+
+Example:
+
+```bash
+git checkout -b feature/new-command
+git add .
+git commit -m "feat: add new command"
+git push origin feature/new-command
+```
+
+### Bug Reports
+
+Khi mở Issue, hãy cung cấp:
+
+* Mô tả lỗi
+* Cách tái hiện
+* Error log
+* Python version
+* discord.py version
+* Các bước đã thử
+
+---
+
+## 14 · Community
+
+<div align="center">
+
+<a href="https://discord.gg/fccfwHzms8">
+<img src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
+</a>
+
+<br><br>
+
+**VietNamese Discord Bot Community**
+
+Thảo luận · Hỗ trợ · Bug Reports · Development
+
+</div>
+
+---
+
+## 15 · Credits
+
+<div align="center">
+
+### Built by **nguyenphanno**
+
+<a href="https://github.com/nguyenphanno">
+<img src="https://img.shields.io/badge/GitHub-nguyenphanno-ffffff?style=for-the-badge&logo=github&logoColor=18181b&labelColor=ffffff" alt="GitHub">
+</a>
+
+<br><br>
+
+**Built with**
+
+`Python` · `discord.py` · `Discord API`
+
+<br>
+
+<a href="https://github.com/nguyenphanno/VietNamese-Discord-Bot-Template">
+<img src="https://img.shields.io/badge/Star%20this%20repository-8b5cf6?style=for-the-badge&logo=github&logoColor=white" alt="Star repository">
+</a>
+
+<br><br>
+
+₊˚⊹ **Build · Learn · Improve** ⊹˚₊
+
+</div>
 
 ---
 
 <div align="center">
 
-**Made with care by Yinlewoaisuru**
+<sub>
 
-**Join Discord:** https://discord.gg/A6sa9hARWA
+**VietNamese Discord Bot** · Open Source Discord Bot Template
 
-*Nếu project này hữu ích, hãy ⭐ Star để ủng hộ nhé!*
+</sub>
 
 </div>
